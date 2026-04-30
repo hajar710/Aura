@@ -1,0 +1,165 @@
+/* --- 1. الحاوية الرئيسية (Grid Layout) --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 كاردات في السطر لتقليل الحجم الضخم */
+    gap: 30px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 2. هيكل الكارد (Product Card) --- */
+.product-card {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+}
+
+/* --- 3. حاوية الصورة والبادجات --- */
+.product-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    /* نضمن أن الحاوية لها ارتفاع موحد دائماً */
+    aspect-ratio: 1 / 1.2; 
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* الحل الجذري لمشكلة اختلاف أطوال الصور في image_89c59f.png */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* تكبير الصورة عند الهوفر */
+.product-card:hover .product-image-wrapper img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 5;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.sale-badge { background-color: #ff3e3e; }
+.new-badge { background-color: rgb(53, 167, 53); }
+
+/* --- 4. أزرار الإجراءات السريعة (Hover Actions) --- */
+.quick-actions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.product-card:hover .quick-actions {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.quick-actions button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.quick-actions button i {
+    font-size: 18px;
+    color: #333;
+}
+
+.quick-actions button:hover {
+    background-color: #000;
+    border-color: #000;
+}
+
+.quick-actions button:hover i {
+    color: #fff;
+}
+
+/* --- 5. معلومات المنتج (النصوص والأسعار) --- */
+.product-info {
+    padding: 15px 0;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0; /* تقليل المسافة تحت العنوان */
+    color: #222;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* مسافة ضيقة جداً بين السعر القديم والجديد */
+}
+
+.old-price-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discount-percent {
+    font-size: 12px;
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d4af37; /* اللون الذهبي المميز */
+}
+
+/* --- 6. التصميم المتجاوب (Responsive) --- */
+@media (max-width: 992px) {
+    .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid { grid-template-columns: 1fr; }
+}

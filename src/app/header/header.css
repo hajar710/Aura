@@ -1,0 +1,74 @@
+/* --- 1. General Header & Container --- */
+header {
+    padding-top: 10px !important;
+    background-color: #fff;
+}
+
+.container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* --- 2. Logo Section --- */
+.logo {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+}
+
+/* --- 3. Search Box Section --- */
+.search-box {
+    padding: 8px 15px !important;
+    border-radius: 5px;
+    background-color: #f8f9fa; /* لون خلفية خفيف للسيرش */
+}
+
+.search-box input {
+    padding: 5px !important;
+    font-size: 14px;
+}
+
+/* --- 4. Navigation Menu --- */
+.navbar-nav {
+    padding: 10px 0 !important;
+    gap: 1rem; /* مسافة بين عناصر المنيو */
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333 !important;
+    padding: 10px 20px !important;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, 
+.text-gold {
+    color: #c5a059 !important;
+}
+
+/* --- 5. User Actions & Icons --- */
+.gap-4 {
+    gap: 2rem !important; /* المسافة بين أيقونات اليوزر والقلب */
+}
+
+.gap-2 {
+    gap: 0.8rem !important; /* المسافة بين أيقونة الشنطة والنص */
+}
+
+/* --- 6. Badges & Cart Info --- */
+.badge {
+    font-size: 10px;
+    padding: 4px 6px !important;
+    min-width: 18px;
+    line-height: 1;
+    background-color: #ffc107; /* اللون الأصفر للبوتستراب */
+}
+
+.cart-info strong {
+    font-size: 13px;
+    color: #000;
+}

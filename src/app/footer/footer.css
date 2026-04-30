@@ -1,0 +1,39 @@
+footer {
+    background-color: #0a0a0a !important; /* لون أسود غامق جداً */
+    font-family: 'Arial', sans-serif;
+}
+
+h5 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+ul li a {
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+ul li a:hover {
+    color: #ffc107 !important; /* يقلب أصفر عند الهوفر */
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #ffc107;
+}
+
+.text-warning {
+    color: #d4af37 !important; /* لون دهبي للأيقونات */
+}

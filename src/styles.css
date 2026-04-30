@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+  /* في ملف styles.css الرئيسي */
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden; /* اختيارياً: عشان لو فيه أي عنصر تالت طلع ميعملش سكرول بار بالعرض */
+}

@@ -1,0 +1,68 @@
+/* تنسيق الفلتر الجانبي */
+.filter-sidebar {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* العنوان الرئيسي للفلتر */
+.main-filter-title {
+  font-family: 'Playfair Display', serif; /* تأكد من استدعاء الخط في index.html */
+  color: #222;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+/* رؤوس الأقسام */
+.filter-section h6 {
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+/* تنسيق الـ Checkbox ليكون مربعاً تماماً */
+.custom-checkbox {
+  border-radius: 0 !important;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.custom-checkbox:checked {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* نصوص الخيارات */
+.form-check-label {
+  font-size: 0.95rem;
+  color: #444;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* الأرقام الجانبية (count) */
+.count-text {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* تفاعل السهم عند الفتح والغلق */
+.pointer {
+  cursor: pointer;
+}
+
+.bi-chevron-up {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.collapsed .bi-chevron-up {
+  transform: rotate(180deg);
+}
+
+/* مسافات بين الخيارات */
+.form-check {
+  margin-bottom: 12px;
+}
